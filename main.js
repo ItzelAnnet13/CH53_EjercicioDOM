@@ -28,13 +28,29 @@ console.log(elementos.item(2));
 console.log(elementos.length);  //10
 
 let contador = 0;
-function modifica(){
+function modifica() {
     //encabezado1.innerText = "Ejercicio DOM"
     encabezado1.innerHTML += "<em>Ejercicio</em> DOM";
     encabezado2.innerText = ++contador;
 }
 
-btnMostrar.addEventListener("click", function(event){
-    console.log("boton btnModificar presionado");
-    
+btnMostrar.addEventListener("click", function (event) {
+    //console.log("boton btnModificar presionado");
+    event.preventDefault();
+
+    let element = document.createElement("li");
+    element.innerText = "Another item"; //<li>Another item</li>
+    element.classList.add("list-group-item");
+
+    let element2 = element.cloneNode(true);
+
+    // before: inserta el elemento antes de la lista
+    //listas.item(0).before(element);
+    // prepent: inserta el elemento al principio de la lista
+    //listas.item(0).prepend(element2);
+    // append: inserta el elemento al final de la lista
+    listas.item(0).append(element);
+    // after: inserta el elemento despues de la lisa
+    listas.item(0).after(element2);
+
 });

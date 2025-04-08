@@ -19,4 +19,4 @@ git push origin main
 
 > Vista previa del index.html
 
-![Index](raw.githubusercontent.com/ItzelAnnet13/CH53_EjercicioDOM/refs/heads/main/Images/index.png)
+![Index](https://raw.githubusercontent.com/ItzelAnnet13/CH53_EjercicioDOM/refs/heads/main/Images/index.png)
